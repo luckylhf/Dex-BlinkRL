@@ -1,0 +1,49 @@
+{
+  "version": 2,
+  "training_seeds": [
+    0,
+    1,
+    2
+  ],
+  "screen_initial_seeds": [
+    1000,
+    1001,
+    1002
+  ],
+  "heldout_initial_seeds": [
+    2000,
+    2001,
+    2002,
+    2003,
+    2004,
+    2005,
+    2006,
+    2007,
+    2008,
+    2009
+  ],
+  "static_seconds": 60,
+  "sequence_seconds": 60,
+  "sequence": "0-10 stand;10-12 linear ramp;12-40 walk;40-42 linear ramp;42-60 stop",
+  "speeds": [
+    0.4,
+    0.6
+  ],
+  "primary_speed": 0.4,
+  "stage1": {
+    "static_completed": true,
+    "static_speed_mae_xy_max": 0.1,
+    "static_drift_m_max": 0.25,
+    "walk_survive_through_s": 40,
+    "walk_mae_xy_max": 0.15,
+    "whole_foot_lifts_min_each": 4,
+    "all_screen_starts_must_pass": true
+  },
+  "separate_stop_gate": {
+    "survive_through_s": 60,
+    "speed_mae_xy_max": 0.1,
+    "drift_m_max": 0.25
+  },
+  "naturalness": "record foot clearance, step events, joint/arm amplitude; no AMP naturalness claim in stage1",
+  "timing": "User clarified: warmup excluded from five minutes. Compile/capture warmup is reported separately. Before the training clock starts, random initial actor/WM/EMA/normalizers are restored exactly, optimizer states and replay are zeroed. All new real sampling, model fitting, policy updates and checkpoint saving count toward 300 seconds. Evaluation cost separately reported."
+}

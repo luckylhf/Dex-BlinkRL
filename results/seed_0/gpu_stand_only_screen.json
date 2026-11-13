@@ -1,0 +1,154 @@
+{
+  "protocol_version": 4,
+  "control_dt": 0.02,
+  "standing_phase_encoding": false,
+  "feet_only_forward_kinematics": true,
+  "evaluator_sha256": "8f90d65221af2899c4cdcccb1b11aad6662c772c17e461619fc487fa48535a21",
+  "scorer_sha256": "93be5b7b0fe20cc95445e96a5cec5908aa7cbd76fdb33cf5fac001e9ed87b56c",
+  "command_speed": 0.4,
+  "scenario": "stand_only",
+  "checkpoint": "models/seed_0/policy.pt",
+  "variant": "ema",
+  "training_seconds": 295.61525890699704,
+  "process_wall_seconds": 349.64970575398183,
+  "prewarm_seconds": 54.03489136198186,
+  "iteration": 1218,
+  "sim_steps": 5120000,
+  "backend": "sameMuJoCoWarp3.11,FP32actor+TF32,CUDAgraph,60ssmoothcommand",
+  "evaluation_seconds": 39.21391047400539,
+  "completed": 3,
+  "passed": 3,
+  "results": [
+    {
+      "seed": 1000,
+      "standing_initial10_pass": true,
+      "walking28_pass": null,
+      "completed": true,
+      "basic_speed_and_stability": true,
+      "passed": true,
+      "duration": 60.0,
+      "min_height": 0.9914220571517944,
+      "min_upright": 0.9988712072372437,
+      "whole_foot_lifts_steady_walk": [
+        0,
+        0
+      ],
+      "phases": {
+        "stand": {
+          "samples": 500,
+          "mean_vx": 0.00026164516480639576,
+          "speed_MAE_xy": 0.026718689310996645,
+          "XY_drift": 0.0017945861864398715
+        },
+        "walk": {
+          "samples": 1400,
+          "mean_vx": 0.00032883498638901595,
+          "speed_MAE_xy": 0.028059290184618235,
+          "XY_drift": 0.00947013866844331
+        },
+        "stop": {
+          "samples": 900,
+          "mean_vx": 2.0744428167947464e-05,
+          "speed_MAE_xy": 0.03255437932076672,
+          "XY_drift": 0.00368154599313887
+        }
+      },
+      "static_MAE_xy": 0.029188930001483128,
+      "static_XY_drift": 0.006014321478832426,
+      "forward_progress_m": 0.0058422088623046875,
+      "max_lateral_displacement_m": 0.011517473205458373,
+      "max_foot_clearance_m": [
+        -0.00023742858320474625,
+        -0.0001712217926979065
+      ]
+    },
+    {
+      "seed": 1001,
+      "standing_initial10_pass": true,
+      "walking28_pass": null,
+      "completed": true,
+      "basic_speed_and_stability": true,
+      "passed": true,
+      "duration": 60.0,
+      "min_height": 0.9904997944831848,
+      "min_upright": 0.9985873103141785,
+      "whole_foot_lifts_steady_walk": [
+        0,
+        0
+      ],
+      "phases": {
+        "stand": {
+          "samples": 500,
+          "mean_vx": 0.0005005021388351452,
+          "speed_MAE_xy": 0.028735424511197073,
+          "XY_drift": 0.008007152719891643
+        },
+        "walk": {
+          "samples": 1400,
+          "mean_vx": 0.0002887248738053521,
+          "speed_MAE_xy": 0.029752544051078113,
+          "XY_drift": 0.008732257087928935
+        },
+        "stop": {
+          "samples": 900,
+          "mean_vx": -0.000124321077665728,
+          "speed_MAE_xy": 0.03440492252186767,
+          "XY_drift": 0.005472817684883994
+        }
+      },
+      "static_MAE_xy": 0.030967569031490588,
+      "static_XY_drift": 0.008943628196467057,
+      "forward_progress_m": 0.004360413091490045,
+      "max_lateral_displacement_m": 0.02100185354356654,
+      "max_foot_clearance_m": [
+        -0.0003990344703197479,
+        -0.0002808133140206337
+      ]
+    },
+    {
+      "seed": 1002,
+      "standing_initial10_pass": true,
+      "walking28_pass": null,
+      "completed": true,
+      "basic_speed_and_stability": true,
+      "passed": true,
+      "duration": 60.0,
+      "min_height": 0.9930355548858643,
+      "min_upright": 0.9992945194244385,
+      "whole_foot_lifts_steady_walk": [
+        0,
+        0
+      ],
+      "phases": {
+        "stand": {
+          "samples": 500,
+          "mean_vx": -0.001159324071770243,
+          "speed_MAE_xy": 0.02718635893748103,
+          "XY_drift": 0.013391808785559366
+        },
+        "walk": {
+          "samples": 1400,
+          "mean_vx": 0.00037793192487567596,
+          "speed_MAE_xy": 0.025609223395837866,
+          "XY_drift": 0.010484381080515047
+        },
+        "stop": {
+          "samples": 900,
+          "mean_vx": 0.00016975319271700248,
+          "speed_MAE_xy": 0.029610453821376222,
+          "XY_drift": 0.003515996452122272
+        }
+      },
+      "static_MAE_xy": 0.02710731657099827,
+      "static_XY_drift": 0.007517396420426527,
+      "forward_progress_m": -0.0032138824462890625,
+      "max_lateral_displacement_m": 0.016651174752041698,
+      "max_foot_clearance_m": [
+        -9.843800216913223e-05,
+        2.581533044576645e-05
+      ]
+    }
+  ],
+  "source_report_sha256": "eb3b68491f1b2116045d0dc024e45a4ebd2fbeef4c442283830a95ead3bda7ed",
+  "source_checkpoint": "train_0295.pt"
+}

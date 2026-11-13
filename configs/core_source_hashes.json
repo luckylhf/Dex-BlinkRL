@@ -1,0 +1,32 @@
+{
+  "description": "Core files from the frozen successful training sources. Hashes below are the current packaged files; src/dexnewrl/learner.py and runtime/LICENSE were updated after packaging for wording and attribution only, with no executable behavior change.",
+  "files": {
+    "src/dexnewrl/collector.py": "93e35006a92209d2f8e0ce9be26d7bf0bc179342c4ed96862bf5cb3c74245195",
+    "src/dexnewrl/robot.py": "68ce4f345b6d9c2f0ffbf5ef9e6a1f317490e63c7ab22835cdc17d9aa400c776",
+    "src/dexnewrl/symmetry.py": "e9b47f38f69ade5f556ae52c8634d6c5e021c2d26ac78c651abc64f09939c0c9",
+    "src/dexnewrl/cold_start.py": "1c658212ee14078ef76ed9abc2bd044224964173d7dce67aeaeed3616fd6e57e",
+    "src/dexnewrl/task.py": "ef4897594e9a0da1e90b031b52cf7ad5e0d842c9e8519e7478832ca033b41e13",
+    "src/dexnewrl/train.py": "44795fc7a901b2b2fcd29308ac2e77ff950ebdbe501f003b6d5186945e67093d",
+    "src/dexnewrl/grounded.py": "d36eb80c7e784a77a6d2645ca11b0d44382134b50953eb7bd1d06bfbdadd60ad",
+    "src/dexnewrl/learner.py": "49eb611a3843e6b677bb05c888f55b295e0aa57fb28a6f72bda1704202320c42",
+    "src/dexnewrl/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/dexnewrl/env.py": "11126f239219fd4fef9cdcbb32e67d72d7a9e2715b9ae8d982c3e7d4e3e419a6",
+    "runtime/LICENSE": "4294aa6ba56ef0792b5e52d080eb6893908022f1d545c6fe0c3f0ea76d245c0b",
+    "runtime/blinkmimic/robot.py": "382d85e1448af096714bcb803d4eac457da209f9d8d537ffe84492c750c8dd11",
+    "runtime/blinkmimic/mirror.py": "50cc0b4a30e417d15b322866848c61d1cb0e39b8ebea5af289b14491b74f3728",
+    "runtime/blinkmimic/buffer.py": "f7cf576e76534ab1828d09444f865e27e66c3eb76c874e9273326be59b1bb541",
+    "runtime/blinkmimic/kinematics.py": "9941b09d15dffce47fcf48aca55f4dd1bcaa21487a4fd5380a7e73854ad0f27a",
+    "runtime/blinkmimic/motion.py": "56c36089bd9f82131ab44262c38a8913922dd02c637169a22a12a68ac4cd0a4f",
+    "runtime/blinkmimic/dr.py": "62e1258cdbf34ca39133af57bbf5aeb63faf7e96e47bf120b02d9b8eeb7c3a66",
+    "runtime/blinkmimic/capture_compat.py": "dbe078dd83f3e351a678b3bf6c944a7f91cd1427926b2fb7bd4cbd7ef7c915d4",
+    "runtime/blinkmimic/networks.py": "180b3b051649474c8f3c8992fbb6b17ce93e53ce5cdd72969f8e76972b2f19f3",
+    "runtime/blinkmimic/rotations.py": "c06b07af580994a4bc71d650cd9d186e4249499ebdd0bc67833e7388cf7ae6ad",
+    "runtime/blinkmimic/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runtime/blinkmimic/sensing.py": "ab42a8b845d993fbf91c54fee913e45db09257684e299ff244a635960611796f",
+    "runtime/blinkmimic/optim.py": "f1358c1aebd14e4215766dccdd614cfa3cf5b8abc9c85e5b888d0661adef1816",
+    "runtime/blinkmimic/mdp.py": "a42fcddf277b9a8f0814074ed54d9e64850d35891efb1a8113864e57249de7e8",
+    "runtime/blinkmimic/env.py": "8599fe1fa43d2af0778faaadf7b5bec6714561c8fd298d6386ebabf2b4d9dbf5",
+    "runtime/blinkmimic/dexrl/dexrl_constants.py": "f63d45e304a5b6d291263b5b51954066634b228703c4a4c4f8f9ff97a313fc18",
+    "runtime/blinkmimic/dexrl/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

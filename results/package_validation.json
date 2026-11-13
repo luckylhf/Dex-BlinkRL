@@ -1,0 +1,240 @@
+{
+  "verified_unix": 1794552884.550433,
+  "behavior": {
+    "training_seeds": 3,
+    "evaluation_scenarios": 12,
+    "trajectories": 78,
+    "arrays": 102,
+    "all_behavior_metrics_exactly_equal": true,
+    "all_raw_arrays_bitwise_equal": true,
+    "details": [
+      {
+        "training_seed": 0,
+        "checks": [
+          {
+            "scenario": "primary",
+            "initial_group": "screen",
+            "trajectories": 3,
+            "all_metrics_equal": true,
+            "all_raw_arrays_bitwise_equal": true,
+            "arrays": 5
+          },
+          {
+            "scenario": "stand_only",
+            "initial_group": "screen",
+            "trajectories": 3,
+            "all_metrics_equal": true,
+            "all_raw_arrays_bitwise_equal": true,
+            "arrays": 5
+          },
+          {
+            "scenario": "primary",
+            "initial_group": "heldout",
+            "trajectories": 10,
+            "all_metrics_equal": true,
+            "all_raw_arrays_bitwise_equal": true,
+            "arrays": 12
+          },
+          {
+            "scenario": "stand_only",
+            "initial_group": "heldout",
+            "trajectories": 10,
+            "all_metrics_equal": true,
+            "all_raw_arrays_bitwise_equal": true,
+            "arrays": 12
+          }
+        ]
+      },
+      {
+        "training_seed": 1,
+        "checks": [
+          {
+            "scenario": "primary",
+            "initial_group": "screen",
+            "trajectories": 3,
+            "all_metrics_equal": true,
+            "all_raw_arrays_bitwise_equal": true,
+            "arrays": 5
+          },
+          {
+            "scenario": "stand_only",
+            "initial_group": "screen",
+            "trajectories": 3,
+            "all_metrics_equal": true,
+            "all_raw_arrays_bitwise_equal": true,
+            "arrays": 5
+          },
+          {
+            "scenario": "primary",
+            "initial_group": "heldout",
+            "trajectories": 10,
+            "all_metrics_equal": true,
+            "all_raw_arrays_bitwise_equal": true,
+            "arrays": 12
+          },
+          {
+            "scenario": "stand_only",
+            "initial_group": "heldout",
+            "trajectories": 10,
+            "all_metrics_equal": true,
+            "all_raw_arrays_bitwise_equal": true,
+            "arrays": 12
+          }
+        ]
+      },
+      {
+        "training_seed": 2,
+        "checks": [
+          {
+            "scenario": "primary",
+            "initial_group": "screen",
+            "trajectories": 3,
+            "all_metrics_equal": true,
+            "all_raw_arrays_bitwise_equal": true,
+            "arrays": 5
+          },
+          {
+            "scenario": "stand_only",
+            "initial_group": "screen",
+            "trajectories": 3,
+            "all_metrics_equal": true,
+            "all_raw_arrays_bitwise_equal": true,
+            "arrays": 5
+          },
+          {
+            "scenario": "primary",
+            "initial_group": "heldout",
+            "trajectories": 10,
+            "all_metrics_equal": true,
+            "all_raw_arrays_bitwise_equal": true,
+            "arrays": 12
+          },
+          {
+            "scenario": "stand_only",
+            "initial_group": "heldout",
+            "trajectories": 10,
+            "all_metrics_equal": true,
+            "all_raw_arrays_bitwise_equal": true,
+            "arrays": 12
+          }
+        ]
+      }
+    ]
+  },
+  "cold_training_entrypoint": {
+    "initial_actor_ema_worldmodel_hashes_match_original_seed0": true,
+    "prewarm_reset_exact": true,
+    "optimizer_and_replay_cleared": true,
+    "checkpoint_reads": [],
+    "formal_iterations": 2,
+    "formal_training_seconds": 2.742285440006526,
+    "prewarm_seconds": 44.481949275999796,
+    "cache_copy_seconds": 0.0,
+    "scope": "New packaged train entry point, full prewarm and cold reset, two real iterations. This is not a new five-minute learning result."
+  },
+  "source_closure": {
+    "core_files_identical_to_all_three_training_snapshots": 25,
+    "core_files_updated_after_packaging": {
+      "src/dexnewrl/learner.py": "one unreachable error-message string reworded; no behavior change",
+      "runtime/LICENSE": "copyright notices completed; not executable code"
+    },
+    "meshes_inside_release": [
+      "xSIM_MUJOCO-main/resources/dex_v3/mujoco/meshes_import/pelvis.obj",
+      "xSIM_MUJOCO-main/resources/dex_v3/meshes/hip_pitch_l_link.STL",
+      "xSIM_MUJOCO-main/resources/dex_v3/meshes/hip_roll_l_link.STL",
+      "xSIM_MUJOCO-main/resources/dex_v3/meshes/hip_yaw_l_link.STL",
+      "xSIM_MUJOCO-main/resources/dex_v3/meshes/knee_pitch_l_link.STL",
+      "xSIM_MUJOCO-main/resources/dex_v3/meshes/ankle_pitch_l_link.STL",
+      "xSIM_MUJOCO-main/resources/dex_v3/meshes/ankle_roll_l_link.STL",
+      "xSIM_MUJOCO-main/resources/dex_v3/meshes/hip_pitch_r_link.STL",
+      "xSIM_MUJOCO-main/resources/dex_v3/meshes/hip_roll_r_link.STL",
+      "xSIM_MUJOCO-main/resources/dex_v3/meshes/hip_yaw_r_link.STL",
+      "xSIM_MUJOCO-main/resources/dex_v3/meshes/knee_pitch_r_link.STL",
+      "xSIM_MUJOCO-main/resources/dex_v3/meshes/ankle_pitch_r_link.STL",
+      "xSIM_MUJOCO-main/resources/dex_v3/meshes/ankle_roll_r_link.STL",
+      "xSIM_MUJOCO-main/resources/dex_v3/meshes/imu_waist_link.STL",
+      "xSIM_MUJOCO-main/resources/dex_v3/meshes/waist_yaw_link.STL",
+      "xSIM_MUJOCO-main/resources/dex_v3/meshes/waist_roll_link.STL",
+      "xSIM_MUJOCO-main/resources/dex_v3/mujoco/meshes_import/waist_pitch_link_lower.obj",
+      "xSIM_MUJOCO-main/resources/dex_v3/mujoco/meshes_import/waist_pitch_link_upper.obj",
+      "xSIM_MUJOCO-main/resources/dex_v3/meshes/camera_body_front_link.STL",
+      "xSIM_MUJOCO-main/resources/dex_v3/meshes/imu_head_link.STL",
+      "xSIM_MUJOCO-main/resources/dex_v3/meshes/radar_head_link.STL",
+      "xSIM_MUJOCO-main/resources/dex_v3/meshes/head_yaw_link.STL",
+      "xSIM_MUJOCO-main/resources/dex_v3/meshes/head_pitch_link.STL",
+      "xSIM_MUJOCO-main/resources/dex_v3/meshes/camera_head_link.STL",
+      "xSIM_MUJOCO-main/resources/dex_v3/meshes/shoulder_pitch_l_link.STL",
+      "xSIM_MUJOCO-main/resources/dex_v3/meshes/shoulder_roll_l_link.STL",
+      "xSIM_MUJOCO-main/resources/dex_v3/meshes/shoulder_yaw_l_link.STL",
+      "xSIM_MUJOCO-main/resources/dex_v3/meshes/elbow_pitch_l_link.STL",
+      "xSIM_MUJOCO-main/resources/dex_v3/meshes/elbow_yaw_l_link.STL",
+      "xSIM_MUJOCO-main/resources/dex_v3/meshes/wrist_pitch_l_link.STL",
+      "xSIM_MUJOCO-main/resources/dex_v3/meshes/wrist_roll_l_link.STL",
+      "xSIM_MUJOCO-main/resources/dex_v3/meshes/left_tcp_link.STL",
+      "xSIM_MUJOCO-main/resources/dex_v3/meshes/shoulder_pitch_r_link.STL",
+      "xSIM_MUJOCO-main/resources/dex_v3/meshes/shoulder_roll_r_link.STL",
+      "xSIM_MUJOCO-main/resources/dex_v3/meshes/shoulder_yaw_r_link.STL",
+      "xSIM_MUJOCO-main/resources/dex_v3/meshes/elbow_pitch_r_link.STL",
+      "xSIM_MUJOCO-main/resources/dex_v3/meshes/elbow_yaw_r_link.STL",
+      "xSIM_MUJOCO-main/resources/dex_v3/meshes/wrist_pitch_r_link.STL",
+      "xSIM_MUJOCO-main/resources/dex_v3/meshes/wrist_roll_r_link.STL",
+      "xSIM_MUJOCO-main/resources/dex_v3/meshes/right_tcp_link.STL"
+    ],
+    "all_python_syntax_valid": true,
+    "no_external_project_asset_paths": true
+  },
+  "videos": [
+    {
+      "training_seed": 0,
+      "video": "videos/seed_0.mp4",
+      "initial_state_seed": 1000,
+      "variant": "ema",
+      "duration_seconds": 60.0,
+      "fps": 20.0,
+      "frames": 1200,
+      "size": [
+        960,
+        544
+      ],
+      "playback_speed": 1,
+      "scenario": "stand10/ramp2/walk28/rampdown2/stop18",
+      "source": "new packaged CPU evaluation, raw arrays equal original records",
+      "camera": "pelvis-following; not evidence of zero world-path drift"
+    },
+    {
+      "training_seed": 1,
+      "video": "videos/seed_1.mp4",
+      "initial_state_seed": 1000,
+      "variant": "ema",
+      "duration_seconds": 60.0,
+      "fps": 20.0,
+      "frames": 1200,
+      "size": [
+        960,
+        544
+      ],
+      "playback_speed": 1,
+      "scenario": "stand10/ramp2/walk28/rampdown2/stop18",
+      "source": "new packaged CPU evaluation, raw arrays equal original records",
+      "camera": "pelvis-following; not evidence of zero world-path drift"
+    },
+    {
+      "training_seed": 2,
+      "video": "videos/seed_2.mp4",
+      "initial_state_seed": 1000,
+      "variant": "ema",
+      "duration_seconds": 60.0,
+      "fps": 20.0,
+      "frames": 1200,
+      "size": [
+        960,
+        544
+      ],
+      "playback_speed": 1,
+      "scenario": "stand10/ramp2/walk28/rampdown2/stop18",
+      "source": "new packaged CPU evaluation, raw arrays equal original records",
+      "camera": "pelvis-following; not evidence of zero world-path drift"
+    }
+  ],
+  "scope": "Packaged code and EMA exports verified in the existing Linux environment. No fresh machine dependency installation or new complete five-minute run performed for packaging."
+}

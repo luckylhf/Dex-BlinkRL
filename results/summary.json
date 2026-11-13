@@ -1,0 +1,128 @@
+{
+  "recipe": "grounded_fast_success",
+  "variant": "ema",
+  "command_speed_m_s": 0.4,
+  "rows": [
+    {
+      "training_seed": 0,
+      "checkpoint": "models/seed_0/policy.pt",
+      "save_completed_training_seconds": 295.64045003301,
+      "mean_actual_body_vx_m_s": 0.39611031565814825,
+      "scores": {
+        "cpu_stand_only_screen": {
+          "tested": 3,
+          "passed": 3,
+          "walking28_passed": 0
+        },
+        "cpu_primary_screen": {
+          "tested": 3,
+          "passed": 3,
+          "walking28_passed": 3
+        },
+        "cpu_stand_only_heldout": {
+          "tested": 10,
+          "passed": 10,
+          "walking28_passed": 0
+        },
+        "cpu_primary_heldout": {
+          "tested": 10,
+          "passed": 10,
+          "walking28_passed": 10
+        },
+        "gpu_stand_only_screen": {
+          "tested": 3,
+          "passed": 3,
+          "walking28_passed": 0
+        },
+        "gpu_primary_screen": {
+          "tested": 3,
+          "passed": 3,
+          "walking28_passed": 3
+        }
+      }
+    },
+    {
+      "training_seed": 1,
+      "checkpoint": "models/seed_1/policy.pt",
+      "save_completed_training_seconds": 300.3088543229969,
+      "mean_actual_body_vx_m_s": 0.38944583392247045,
+      "scores": {
+        "cpu_stand_only_screen": {
+          "tested": 3,
+          "passed": 3,
+          "walking28_passed": 0
+        },
+        "cpu_primary_screen": {
+          "tested": 3,
+          "passed": 3,
+          "walking28_passed": 3
+        },
+        "cpu_stand_only_heldout": {
+          "tested": 10,
+          "passed": 10,
+          "walking28_passed": 0
+        },
+        "cpu_primary_heldout": {
+          "tested": 10,
+          "passed": 8,
+          "walking28_passed": 10
+        },
+        "gpu_stand_only_screen": {
+          "tested": 3,
+          "passed": 3,
+          "walking28_passed": 0
+        },
+        "gpu_primary_screen": {
+          "tested": 3,
+          "passed": 3,
+          "walking28_passed": 3
+        }
+      }
+    },
+    {
+      "training_seed": 2,
+      "checkpoint": "models/seed_2/policy.pt",
+      "save_completed_training_seconds": 295.55486657700385,
+      "mean_actual_body_vx_m_s": 0.3958180074717671,
+      "scores": {
+        "cpu_stand_only_screen": {
+          "tested": 3,
+          "passed": 3,
+          "walking28_passed": 0
+        },
+        "cpu_primary_screen": {
+          "tested": 3,
+          "passed": 3,
+          "walking28_passed": 3
+        },
+        "cpu_stand_only_heldout": {
+          "tested": 10,
+          "passed": 10,
+          "walking28_passed": 0
+        },
+        "cpu_primary_heldout": {
+          "tested": 10,
+          "passed": 10,
+          "walking28_passed": 10
+        },
+        "gpu_stand_only_screen": {
+          "tested": 3,
+          "passed": 3,
+          "walking28_passed": 0
+        },
+        "gpu_primary_screen": {
+          "tested": 3,
+          "passed": 3,
+          "walking28_passed": 3
+        }
+      }
+    }
+  ],
+  "scope": "Flat plane, forward commands, initial joint perturbation std0.01rad; no heading/path gate",
+  "known_limits": [
+    "seed1: 2/10 falls after stopping",
+    "seed0: accumulated lateral path deviation",
+    "seed2: approximately14-15cm static drift",
+    "AMP style and hardware not validated"
+  ]
+}

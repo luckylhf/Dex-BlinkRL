@@ -1,0 +1,18 @@
+{
+  "created_unix": 1794552295.0044608,
+  "core_files_unchanged": 25,
+  "core_files_updated_after_build": {
+    "src/dexnewrl/learner.py": "one unreachable error-message string reworded; no behavior change",
+    "runtime/LICENSE": "copyright notices completed; not executable code"
+  },
+  "models_exported": "EMA only, equal tensors verified",
+  "asset_meshes": 40,
+  "delivery_only_changes": [
+    "unified entry point",
+    "shared evaluation physics path",
+    "portable launcher and backup instruction"
+  ],
+  "contains_failed_runs": false,
+  "contains_training_cache": false,
+  "contains_intermediate_checkpoints": false
+}

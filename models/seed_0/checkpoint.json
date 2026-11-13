@@ -1,0 +1,17 @@
+{
+  "training_seed": 0,
+  "source_run": "r009_grounded_fast_seed0",
+  "source_checkpoint": "train_0295.pt",
+  "source_checkpoint_sha256": "1a2d28f3591e50d9d03817636de531bc811d0237ce9b1f1f68b1195f923b8cf1",
+  "ema_only_export_sha256": "65ee57773b31e115b11cb18d24fc610449bdbf8ea0f36bc22baf2047ded8fed2",
+  "ema_parameters_unchanged": true,
+  "save_completed_training_seconds": 295.64045003301,
+  "prewarm_seconds": 54.03489136198186,
+  "real_transitions": 5120000,
+  "updates_world_model_attempted_accepted_policy_attempted_accepted": [
+    3654,
+    3654,
+    2036,
+    2036
+  ]
+}

@@ -1,0 +1,53 @@
+[
+  {
+    "training_seed": 0,
+    "video": "videos/seed_0.mp4",
+    "initial_state_seed": 1000,
+    "variant": "ema",
+    "duration_seconds": 60.0,
+    "fps": 20.0,
+    "frames": 1200,
+    "size": [
+      960,
+      544
+    ],
+    "playback_speed": 1,
+    "scenario": "stand10/ramp2/walk28/rampdown2/stop18",
+    "source": "new packaged CPU evaluation, raw arrays equal original records",
+    "camera": "pelvis-following; not evidence of zero world-path drift"
+  },
+  {
+    "training_seed": 1,
+    "video": "videos/seed_1.mp4",
+    "initial_state_seed": 1000,
+    "variant": "ema",
+    "duration_seconds": 60.0,
+    "fps": 20.0,
+    "frames": 1200,
+    "size": [
+      960,
+      544
+    ],
+    "playback_speed": 1,
+    "scenario": "stand10/ramp2/walk28/rampdown2/stop18",
+    "source": "new packaged CPU evaluation, raw arrays equal original records",
+    "camera": "pelvis-following; not evidence of zero world-path drift"
+  },
+  {
+    "training_seed": 2,
+    "video": "videos/seed_2.mp4",
+    "initial_state_seed": 1000,
+    "variant": "ema",
+    "duration_seconds": 60.0,
+    "fps": 20.0,
+    "frames": 1200,
+    "size": [
+      960,
+      544
+    ],
+    "playback_speed": 1,
+    "scenario": "stand10/ramp2/walk28/rampdown2/stop18",
+    "source": "new packaged CPU evaluation, raw arrays equal original records",
+    "camera": "pelvis-following; not evidence of zero world-path drift"
+  }
+]

@@ -1,0 +1,12 @@
+.venv/
+.cache/
+cache/
+generated/
+runs/
+audit/
+backups/
+outputs/
+__pycache__/
+*.pyc
+MUJOCO_LOG.TXT
+.DS_Store

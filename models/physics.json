@@ -1,0 +1,11 @@
+{
+  "uncompressed_sha256": "e866bcc9ff206c3618dbd8fe0574c71b657f68170144776e7769ea76786c0d03",
+  "uncompressed_bytes": 541442280,
+  "mujoco_version": "3.11.0",
+  "shared_by_seeds": [
+    0,
+    1,
+    2
+  ],
+  "purpose": "Exact standalone CPU evaluation and replay scene"
+}

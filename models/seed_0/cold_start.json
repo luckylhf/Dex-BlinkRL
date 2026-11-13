@@ -1,0 +1,113 @@
+{
+  "initialization": {
+    "seed": 0,
+    "actor": {
+      "alo": "1717a26eb3d71a2a37b8dd2629cbf2999c678c3faf29f0b658f4e3e07eefabac",
+      "ahi": "dc02e7e8146bed81eca8b141557119665376e02162d488494dda4d8057ca19c5",
+      "norm.mean": "52a3e0804d93dc525ec3c67ef8ac5b01756ecf0513e36f3c19435e4c82cb5d29",
+      "norm.var": "b31790da40a7eca872dc5f6718345c7a2012dcea00e9e496e4785645471f8570",
+      "norm.count": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+      "net.0.weight": "25d7b42786992502bee93f9b624a78ef3cb5ab0896ab3482cba435f7f0b5e3af",
+      "net.0.bias": "e717ccca527292c9a5668dcf836c24b22cdafe3ac7706af952c289999f2298cd",
+      "net.2.weight": "e3242530034d84bc88fa4f0ba1d874760511dc185954c3a1972ce6a88339f702",
+      "net.2.bias": "300e7caab54cedd333e96aefb7ce5a7da2979e959537b2274e5ecb9191b18e88",
+      "net.4.weight": "e8d3753ff1aae8cb23eb34372999c889f7b779b09bd7ccb4e27c5683a2053cb5",
+      "net.4.bias": "9d977dab88d12386150d6cd18fba629486f0badf2724a00c29ac2ab01a9fcc1e",
+      "net.6.weight": "816b115180f5878429f0a59234ce175d393940561ea1cc0558f0e70d69236ccf",
+      "net.6.bias": "62b14867e4e79d50673d2f7474335229f54c478f56d2a910235e1953c6d29206"
+    },
+    "ema": {
+      "alo": "1717a26eb3d71a2a37b8dd2629cbf2999c678c3faf29f0b658f4e3e07eefabac",
+      "ahi": "dc02e7e8146bed81eca8b141557119665376e02162d488494dda4d8057ca19c5",
+      "norm.mean": "52a3e0804d93dc525ec3c67ef8ac5b01756ecf0513e36f3c19435e4c82cb5d29",
+      "norm.var": "b31790da40a7eca872dc5f6718345c7a2012dcea00e9e496e4785645471f8570",
+      "norm.count": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+      "net.0.weight": "25d7b42786992502bee93f9b624a78ef3cb5ab0896ab3482cba435f7f0b5e3af",
+      "net.0.bias": "e717ccca527292c9a5668dcf836c24b22cdafe3ac7706af952c289999f2298cd",
+      "net.2.weight": "e3242530034d84bc88fa4f0ba1d874760511dc185954c3a1972ce6a88339f702",
+      "net.2.bias": "300e7caab54cedd333e96aefb7ce5a7da2979e959537b2274e5ecb9191b18e88",
+      "net.4.weight": "e8d3753ff1aae8cb23eb34372999c889f7b779b09bd7ccb4e27c5683a2053cb5",
+      "net.4.bias": "9d977dab88d12386150d6cd18fba629486f0badf2724a00c29ac2ab01a9fcc1e",
+      "net.6.weight": "816b115180f5878429f0a59234ce175d393940561ea1cc0558f0e70d69236ccf",
+      "net.6.bias": "62b14867e4e79d50673d2f7474335229f54c478f56d2a910235e1953c6d29206"
+    },
+    "world_model": {
+      "p2m": "5472928400f28b6cfb6b148acf61f8d446326c481a551fe04f8de8f4608abca8",
+      "m2p": "081e8f857a7eefd764312ecf7ea36a646c16a9def2b3b7eadf25d0af1cbd99be",
+      "xi_n": "fb76d50df2e71f657a461f56cacd7ec1cd9d961c2eca1ccfebcca5f4e0d3cb7d",
+      "model.model_to_policy": "081e8f857a7eefd764312ecf7ea36a646c16a9def2b3b7eadf25d0af1cbd99be",
+      "model.target_zero_model": "ff76db22b85b2b283604fc12f865aded2d5ef1cd6f49e5e510af0d087023d074",
+      "model.net.0.weight": "dfee3762c09770c2133276bd00d054595ab3a3609aac81af3b303c0142b32b73",
+      "model.net.0.bias": "0f01759a51f511953ed60bffd2ad8bcd7d1fff5cbf2ce049be4fee731de945e4",
+      "model.net.1.weight": "fef951e6c76ad6a01b208af650ca6d95769bec840e009981c5ae1316a42c90b1",
+      "model.net.1.bias": "e5a00aa9991ac8a5ee3109844d84a55583bd20572ad3ffcd42792f3c36b183ad",
+      "model.net.3.weight": "007c4fbbe9174d9543d83915c0f9048c93f0fe19478a24edec44b08849ded8e4",
+      "model.net.3.bias": "e62c38e16e38b8f6942fe155e15f48f0e8bece10120032ff6450698392ad3c3e",
+      "model.net.4.weight": "fef951e6c76ad6a01b208af650ca6d95769bec840e009981c5ae1316a42c90b1",
+      "model.net.4.bias": "e5a00aa9991ac8a5ee3109844d84a55583bd20572ad3ffcd42792f3c36b183ad",
+      "model.net.6.weight": "e6fed9176533b1aad0ac6e39e38ce984a58d278bdd51121b12d9c3b47d2f05b0",
+      "model.net.6.bias": "2c5c611c8fc6d42ba371fe50a70dccfdbb00dd190e276b74e2d5bfed21c2048f",
+      "model.net.7.weight": "fef951e6c76ad6a01b208af650ca6d95769bec840e009981c5ae1316a42c90b1",
+      "model.net.7.bias": "e5a00aa9991ac8a5ee3109844d84a55583bd20572ad3ffcd42792f3c36b183ad",
+      "model.net.9.weight": "3645a04b3f853f324732ffb9779ee1c95b01f6e5f68c6a07968ecbedaad552c1",
+      "model.net.9.bias": "c4fcd50d9f0c893c46288b57d8e62b18523145956b249b6ecd6c21718be49065",
+      "model.in_norm.mean": "aaf4a48db8af6b0cb05bff1b3b4847cb6235f0de26ccc6c56aa184032dba0063",
+      "model.in_norm.var": "33b79eb1da4c11426448f1d05196c018875c788e34c3d9eda2b9fa7e4b1b064f",
+      "model.in_norm.count": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+      "model.out_norm.mean": "c4fcd50d9f0c893c46288b57d8e62b18523145956b249b6ecd6c21718be49065",
+      "model.out_norm.var": "11b783fe9ddd7710e4e45a412a6867dbcff9acae0850544d98a87232b7f65e56",
+      "model.out_norm.count": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+      "model.inc_norm.mean": "c4fcd50d9f0c893c46288b57d8e62b18523145956b249b6ecd6c21718be49065",
+      "model.inc_norm.var": "11b783fe9ddd7710e4e45a412a6867dbcff9acae0850544d98a87232b7f65e56",
+      "model.inc_norm.count": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+    },
+    "checkpoint_reads": [],
+    "critic": null,
+    "amp_discriminator": null,
+    "data_prior": null,
+    "reference_skip": false,
+    "fixed_standing_controller": false,
+    "sample_steps": 0,
+    "optimizer_update_counts": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "initialization": "fresh torch seed; fresh optimizer states and normalizer statistics"
+  },
+  "prewarm_reset": {
+    "restored_random_parameter_and_normalizer_hashes_exact": true,
+    "optimizer_tensors_zero": true,
+    "optimizer_tensor_count": 62,
+    "replay_tensors_zero": true,
+    "replay_size": 0,
+    "update_counts_after": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "discarded_prewarm_update_counts": [
+      37,
+      37,
+      25,
+      25
+    ],
+    "training_rng_seed": 100000,
+    "graph_addresses_preserved": true,
+    "learning_statistics_reset": [
+      "actor/world model normalizers",
+      "optimizer momentum, moments and steps",
+      "EMA",
+      "gradient moving average",
+      "update counters",
+      "replay data and pointers"
+    ],
+    "preserved_nonlearned_state": [
+      "compiled code",
+      "CUDA graphs",
+      "allocation/capture bookkeeping"
+    ]
+  }
+}

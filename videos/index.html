@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dex-BlinkRL · 三个种子站走回放</title>
+<style>
+body{font-family:system-ui,-apple-system,sans-serif;background:#f4f6f8;color:#182530;max-width:1100px;margin:36px auto;padding:0 20px;line-height:1.65}
+h1{font-size:28px;margin-bottom:8px}p{max-width:960px}.note{background:#fff3d6;padding:14px 18px;border-radius:8px}
+article{background:white;border:1px solid #dce2e8;border-radius:12px;padding:20px;margin:24px 0}h2{margin:0 0 8px;font-size:21px}
+video{display:block;width:100%;background:#111;border-radius:6px}a{color:#145eb0}code{font-size:14px}small{color:#516273}
+</style>
+<h1>Dex-BlinkRL · 三个种子站走回放</h1>
+<p>同一配方，随机 actor 与随机世界模型冷启动。预热另计，所选模型训练时间约五分钟。视频为独立 CPU MuJoCo 的完整 60 秒原速回放，均使用 EMA 策略与初态 1000。</p>
+<p><strong>指令流程：</strong>静站 10 秒 → 平滑加速 2 秒 → 0.4m/s 行走 28 秒 → 平滑减速 2 秒 → 停车 18 秒。</p>
+<p class="note">视频展示一个固定初态。完整留出评测中，三个种子的静站与行走均为 10/10，seed 1 的停车后存活有两次失败。镜头跟随身体，世界坐标下的横漂需结合评测数据判断；本结果不是自然 AMP 步态或真机验收。</p>
+<article><h2>Seed 0 · 295.64 秒</h2><p>留出静站 10/10 · 行走 10/10 · 完整站走停 10/10 · 平均前进速度 0.396m/s</p><video controls preload="metadata" poster="seed_0.jpg" src="seed_0.mp4"></video><p><a href="seed_0.mp4">直接打开 MP4</a> · <a href="../results/seed_0/cpu_primary_heldout.json">留出评测数据</a></p></article>
+<article><h2>Seed 1 · 300.31 秒</h2><p>留出静站 10/10 · 行走 10/10 · 完整站走停 8/10 · 平均前进速度 0.389m/s</p><video controls preload="metadata" poster="seed_1.jpg" src="seed_1.mp4"></video><p><a href="seed_1.mp4">直接打开 MP4</a> · <a href="../results/seed_1/cpu_primary_heldout.json">留出评测数据</a></p></article>
+<article><h2>Seed 2 · 295.55 秒</h2><p>留出静站 10/10 · 行走 10/10 · 完整站走停 10/10 · 平均前进速度 0.396m/s</p><video controls preload="metadata" poster="seed_2.jpg" src="seed_2.mp4"></video><p><a href="seed_2.mp4">直接打开 MP4</a> · <a href="../results/seed_2/cpu_primary_heldout.json">留出评测数据</a></p></article>
+<p><a href="../README.md">阅读从零复现说明</a> · <a href="../results/summary.json">全部结果汇总</a></p>
+<small>回放方法：直接显示独立评测保存的 qpos，20fps，1× 速度，无动作插值、无剪辑。视频不是新的训练结果。</small>
+</html>
