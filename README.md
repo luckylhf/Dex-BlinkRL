@@ -175,3 +175,47 @@ MANIFEST.json             全包文件 SHA-256
 核心训练代码与三个成功运行的冻结源码一致；交付层仅增加简化命令、共享物理模型路径和视频入口。部分上游通用模块保留原有接口，主入口固定成功配方，不提供失败实验配方。方法借鉴 [SuperMimic](https://github.com/HybridRobotics/supermimic)、[BlinkMimic](https://github.com/fuyichen0725/blinkmimic) 与 [XSoma 固定版本](https://github.com/nico-bohlinger/xsoma/tree/835410a2646c224addd536b3fb857ca84260ff7a)。许可与归属见 `runtime/LICENSE` 和 `vendor/THIRD_PARTY_NOTICES.md`；机器人资产随用户项目交付，不在此新增再授权声明。
 
 本包的检查范围和实测结果见 [交付验证](results/package_validation.json)。不包含 Isaac/ROS 真机部署或 ONNX 导出入口。
+
+## 8. 真机部署建议：复用 Dex-RL 部署栈
+
+本包只到 MuJoCo CPU 评测，没有 ROS 2 节点、通信层、状态机、安全保护和 ONNX 导出入口。建议复用 **Dex-RL** 的 ROS 2 部署栈（`rl_control` 包、七状态 FSM、`run_real.sh` / `run_sim.sh`、`bodyctrl_msgs` 与本体 SDK 接口），本包负责提供策略和观测契约。
+
+Dex-RL 地址：<https://github.com/luckylhf/Dex-RL>。其真机验证环境为 x86_64 本体板、Ubuntu 24.04、ROS 2 Jazzy，29 路执行器，策略控制其中 23 个关节。
+
+**这不是已经完成的真机适配，本文只是把已核对一致的部分和仍需验证的部分写清楚。** 本包未在真机上运行过。
+
+### 8.1 已核对一致的接口契约
+
+下表逐项比对本包的 `src/dexnewrl/task.py`、`src/dexnewrl/robot.py` 与 Dex-RL 的 `Deploy_Tienkung/policy/walk_amp/`（`walk_amp.yaml`、`fsm_walkamp.py`）：
+
+| 契约项 | 本包 | Dex-RL `walk_amp` | 结论 |
+|---|---|---|---|
+| 观测维度 | 84 维 × 10 帧历史，共 840 | `observations_size: 84`、`num_hist: 10` | 一致 |
+| 观测顺序 | 角速度 3 + 重力投影 3 + 命令 3 + 关节位置误差 23 + 关节速度 23 + 上一步动作 23 + 相位 6 | 同序拼接 | 一致 |
+| 相位 6 维 | `sin(左), sin(右), cos(左), cos(右), 0.38, 0.38`；周期 0.85 秒，左右偏移 0.38 / 0.88 | `gait_phase()`，参数默认值相同 | 一致 |
+| 策略输入输出 | 840 → 23 | `[1,840] → [1,23]`，加载时校验 | 一致 |
+| 动作映射 | `q0 + 0.25 × a` | `action_scale: 0.25` + `default_joint_angles` | 一致 |
+| 默认姿态 | `TienKung-Lab` 的 `InitialStateCfg.joint_pos` | `init_state.default_joint_angles` | 23 项逐项相同 |
+| PD 增益 | `TienKung-Lab` 的 `ImplicitActuatorCfg` 刚度/阻尼 | `gains.kp/kd` | 23 项逐项相同 |
+| 观测裁剪 | ±100 | `clip_observations: 100.0` | 一致 |
+| 关节顺序 | 本包仅读取 `walk_amp.yaml` 的 `joint_names` | 同一份文件 | 同一来源 |
+
+`task.py` 首行注释 "Actor contract is original84x10, allscales1" 指的就是这套部署契约，因此复用部署栈不需要改观测定义、动作缩放、默认姿态或增益。
+
+### 8.2 需要新增或修改的部分
+
+1. **导出 ONNX**：`models/seed_N/policy.pt` 的 `actor` 已包含 `RunningNorm` 归一化，可用 `torch.onnx.export` 直接导出为 `[1,840] → [1,23]` 单输入单输出模型，替换 Dex-RL 侧的 `policy/walk_amp/model/policy.onnx`，或放成独立状态目录。
+2. **推理频率**：Dex-RL 全局 `dt: 0.01`（100 Hz），本包训练控制周期为 0.02 秒（50 Hz）。把状态配置里的 `control.decimation` 改为 `2` 即可，`timer_gait_` 仍按 0.01 累加，相位在真实时间上的推进与训练一致，不需要改写相位逻辑。
+3. **命令限幅**：训练只采样前向速度，`y` 与 `yaw` 恒为 0，命令每步变化上限 0.005 / 0.005 / 0.01。真机手柄应禁用侧向和转向输入，并对前向命令按同样速率限幅，否则策略会收到训练分布外的指令。
+4. **末端关节保持**：23 个受控关节以外，沿用 Dex-RL 已有的锁存保持逻辑。
+5. **安全层**：STOP 状态、阻尼停止、反馈超时与故障处理全部由 Dex-RL 提供，本包内没有实现，不可省略。
+
+### 8.3 上真机前的验证顺序
+
+1. **数值对拍**：同一切点的 ONNX 与 `policy.pt` 在同一初态下跑 60 秒，动作和 qpos 误差应在 1e-5 量级。
+2. **闭环仿真**：在 Dex-RL 的 `run_sim.sh`（ROS 2 + MuJoCo）中运行新状态，与 `results/seed_0/` 和 `videos/seed_0.mp4` 的轨迹对比。
+3. **真机低速**：`ZERO → 新状态`，限速起步，有人看护，先确认站立 10 秒再给前向命令。
+
+必须自行核对的一点：重力投影与角速度的来源不同。本包直接用 MuJoCo 姿态矩阵（`-R[...,2,:]`），部署侧由 IMU 欧拉角转四元数后再做逆旋转。语义应当等价，但符号与转置必须用同一组姿态数值对拍确认。此外，更换模型时仍需按 Dex-RL 的流程核对增益，脚踝的串联关节空间转换依赖 `sptlib_python`。
+
+**已知边界：** 本包只验收平地、前向 0.4 m/s、60 秒流程，没有训练转向、侧向、后退、复杂地形和抗推扰；seed 1 有两个留出初态在停车后摔倒，seed 0 存在明显累计横向路径偏移。真机必须保留保护逻辑并低速起步，当前策略不能作为精确到点或自然步态的交付依据。
